@@ -1,0 +1,6 @@
+option(
+  'dbus_interface_path',
+  type: 'string',
+  description: 'Path to the UDisks D-Bus API interface file',
+  yield: true,
+)
