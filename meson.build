@@ -2,7 +2,6 @@ project(
   'udisks-sdbus-cpp',
   'cpp',
   version: '2.10.1',
-  default_options: ['warning_level=3'],
   meson_version: '>=0.63.0',
 )
 project_description = 'Auto-generated sdbus-c++ bindings for UDisks D-Bus API'
