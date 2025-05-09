@@ -7,4 +7,6 @@ please run `meson setup -Ddbus_interface_path={PATH} build`.''',
   )
 endif
 
-run_command('cp', dbus_interface_path, meson.current_source_dir(), check: true)
+cp_prog = find_program('cp')
+
+run_command(cp_prog, dbus_interface_path, meson.current_source_dir(), check: true)
