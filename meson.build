@@ -1,10 +1,12 @@
 project(
-  'udisks-sdbus-cpp',
+  'udisks-sdbus-c++',
   'cpp',
   version: '2.10.1',
   meson_version: '>=0.63.0',
 )
+project_friendly_name = meson.project_name().replace('+', 'p')
 project_description = 'Auto-generated sdbus-c++ bindings for UDisks D-Bus API'
+project_include_dir = 'include/' + meson.project_name()
 
 sdbus_cpp = dependency('sdbus-c++', version: ['>=2.1.0', '<=3.0.0']) # semver
 udisks2 = dependency('udisks2', version: meson.project_version())
@@ -13,14 +15,27 @@ subdir('dbus')
 
 dbus_interface = files('dbus/org.freedesktop.UDisks2.xml')
 
-subdir('include')
+subdir(project_include_dir)
+
+# TODO(xlacroixx): Move generated headers to the include directory?
+# mv_prog = find_program('mv')
+#
+# custom_target(
+#   'move-bindings',
+#   output: bindings,
+#   input: gen_bindings,
+#   command: [mv_prog, '@INPUT@', '@SOURCE_ROOT@/' + project_include_dir],
+# )
 
 project_dep = declare_dependency(
   dependencies: [sdbus_cpp, udisks2],
-  include_directories: 'include',
-  sources: [gen_udisks_sdbus_bindings],
+  include_directories: project_include_dir,
+  sources: [gen_bindings],
 )
-set_variable(meson.project_name().replace('-', '_') + '_dep', project_dep)
+set_variable(
+  project_friendly_name.replace('-', '_') + '_dep',
+  project_dep,
+)
 
 # TODO(xlacroixx): tests
 # if not meson.is_subproject()
@@ -44,5 +59,5 @@ pkg.generate(
   description: project_description,
   subdirs: meson.project_name(),
   requires: [sdbus_cpp, udisks2],
-  url: 'https://codeberg.org/xlacroixx/' + meson.project_name(),
+  url: 'https://codeberg.org/xlacroixx/' + project_friendly_name,
 )
