@@ -52,3 +52,7 @@ always: look at the [Meson documentation](https://mesonbuild.com/Installing.html
 <!-- TODO(xlacroixx): complete -->
 
 Dependency variable: `udisks_sdbus_cpp_dep`
+
+## License
+
+Licensed under the [MIT License](LICENSE)
