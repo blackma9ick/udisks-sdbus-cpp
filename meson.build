@@ -6,7 +6,6 @@ project(
 )
 project_friendly_name = meson.project_name().replace('+', 'p')
 project_description = 'Auto-generated sdbus-c++ bindings for UDisks D-Bus API'
-project_include_dir = 'include/' + meson.project_name()
 
 sdbus_cpp = dependency('sdbus-c++', version: ['>=2.1.0', '<=3.0.0']) # semver
 udisks2 = dependency('udisks2', version: meson.project_version())
@@ -15,7 +14,7 @@ subdir('dbus')
 
 dbus_interface = files('dbus/org.freedesktop.UDisks2.xml')
 
-subdir(project_include_dir)
+subdir('include/udisks-sdbus-c++')
 
 # TODO(xlacroixx): Move generated headers to the include directory?
 # mv_prog = find_program('mv')
@@ -29,7 +28,7 @@ subdir(project_include_dir)
 
 project_dep = declare_dependency(
   dependencies: [sdbus_cpp, udisks2],
-  include_directories: project_include_dir,
+  include_directories: 'include',
   sources: [gen_bindings],
 )
 set_variable(
