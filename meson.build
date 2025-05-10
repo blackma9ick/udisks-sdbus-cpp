@@ -7,7 +7,7 @@ project(
 project_friendly_name = meson.project_name().replace('+', 'p')
 project_description = 'Auto-generated sdbus-c++ bindings for UDisks D-Bus API'
 
-sdbus_cpp = dependency('sdbus-c++', version: ['>=2.1.0', '<=3.0.0']) # semver
+sdbus_cpp = dependency('sdbus-c++', version: ['>=2.1.0', '<=3.0.0']) # SemVer
 # We want to provide strong versioning against UDisks.
 # However maybe this is too strong; maybe allow any MINOR (0.0.X) version?
 udisks2 = dependency('udisks2', version: meson.project_version())
@@ -21,7 +21,6 @@ subdir('include/udisks-sdbus-c++')
 project_dep = declare_dependency(
   dependencies: [sdbus_cpp, udisks2],
   include_directories: 'include',
-  # sources: [gen_bindings, copy_bindings],
   sources: [gen_bindings],
 )
 set_variable(
