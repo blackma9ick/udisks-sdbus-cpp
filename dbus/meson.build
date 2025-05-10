@@ -1,13 +1,13 @@
-dbus_interface_path = get_option('dbus_interface_path')
+udisks_dbus_interface = get_option('udisks_dbus_interface')
 
-if dbus_interface_path == ''
+if udisks_dbus_interface == ''
   error(
     '''Path to UDisks D-Bus API interface file was not given;
-please provide `dbus_interface_path` in meson_options.txt
-or run `meson setup -Ddbus_interface_path={PATH} build`.''',
+please provide `udisks_dbus_interface` in meson_options.txt
+or run `meson setup -Dudisks_dbus_interface={PATH} build`.''',
   )
 endif
 
 cp_prog = find_program('cp')
 
-run_command(cp_prog, dbus_interface_path, meson.current_source_dir(), check: true)
+run_command(cp_prog, udisks_dbus_interface, meson.current_source_dir(), check: true)

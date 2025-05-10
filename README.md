@@ -9,7 +9,7 @@ Auto-generated sdbus-c++ bindings for UDisks D-Bus API.
 Make sure the project version matches the `udisks2` Meson dependency:
 this determines which UDisks version the bindings will match.
 
-At the setup phase, you must define the `dbus_interface_path` Meson option:
+At the setup phase, you must define the `udisks_dbus_interface` Meson option:
 this is the UDisks D-Bus interface description file that the project will
 retrieve in the setup process, installing it in `dbus/`.
 
@@ -21,7 +21,7 @@ You can either do this at the command line:
 
 ```sh
 meson setup \
-  -Ddbus_interface_path='/usr/share/dbus-1/interfaces/org.freedesktop.UDisks2.xml' \
+  -Dudisks_dbus_interface='/usr/share/dbus-1/interfaces/org.freedesktop.UDisks2.xml' \
   builddir
 ```
 
