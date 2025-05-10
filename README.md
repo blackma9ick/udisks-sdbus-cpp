@@ -1,4 +1,4 @@
-# udisks-sdbus-cpp
+# udisks-sdbus-c++
 
 Auto-generated sdbus-c++ bindings for UDisks D-Bus API.
 
