@@ -2,6 +2,7 @@ project(
   'udisks-sdbus-c++',
   'cpp',
   version: '2.10.1',
+  license: 'MIT',
   meson_version: '>=0.63.0',
 )
 project_friendly_name = meson.project_name().replace('+', 'p')
