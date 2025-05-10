@@ -1,6 +1,6 @@
 option(
   'udisks_dbus_interface',
   type: 'string',
-  description: 'Path to the UDisks D-Bus API interface file',
+  description: 'Path to the UDisks D-Bus API interface description (IDL) file',
   yield: true,
 )

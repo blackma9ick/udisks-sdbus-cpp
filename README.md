@@ -36,7 +36,8 @@ Just run `meson compile -C builddir`
 ### Install
 
 Both the adaptor (server) and proxy (client) bindings headers will get installed
-to the standard include directory, which is usually `/usr/local/include`.
+to a subdirectory in the standard system include directory.
+Usually this is `/usr/local/include/udisks-sdbus-c++`.
 
 Just run `meson install -C builddir`
 
