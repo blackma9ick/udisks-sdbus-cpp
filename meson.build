@@ -19,9 +19,11 @@ dbus_interface = files('dbus/org.freedesktop.UDisks2.xml')
 
 subdir('include/udisks-sdbus-c++')
 
+inc_dir = include_directories('include')
+
 project_dep = declare_dependency(
   dependencies: [sdbus_cpp, udisks2],
-  include_directories: 'include',
+  include_directories: inc_dir,
   sources: [gen_bindings],
 )
 set_variable(
