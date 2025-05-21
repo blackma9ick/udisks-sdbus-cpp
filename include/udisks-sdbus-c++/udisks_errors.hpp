@@ -20,8 +20,8 @@
 
 /// Possible errors that can be returned from the UDisks D-Bus API.
 
-#ifndef UDISKS_SDBUS_CPP_UDISKS_ERROR_HPP_
-#define UDISKS_SDBUS_CPP_UDISKS_ERROR_HPP_
+#ifndef UDISKS_SDBUS_CPP_UDISKS_ERRORS_HPP_
+#define UDISKS_SDBUS_CPP_UDISKS_ERRORS_HPP_
 
 #include <array>
 
@@ -141,4 +141,4 @@ static_assert(UdisksErrorNames.size() ==
 
 } // namespace udisks_sdbus
 
-#endif // UDISKS_SDBUS_CPP_UDISKS_ERROR_HPP_
+#endif // UDISKS_SDBUS_CPP_UDISKS_ERRORS_HPP_
