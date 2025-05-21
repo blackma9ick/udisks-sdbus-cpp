@@ -29,7 +29,7 @@ set_variable(
   project_dep,
 )
 
-# TODO(xlacroixx): tests: grab an UDisks example program.
+# TEST(xlacroixx): grab an UDisks example program.
 
 pkg = import('pkgconfig')
 pkg.generate(
