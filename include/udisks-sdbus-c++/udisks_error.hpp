@@ -100,7 +100,8 @@ enum class UdisksErrors {
   UDISKS_ERROR_NUM_ENTRIES,
 };
 
-constexpr auto kUdisksErrorNumEntries{
+/// Number of entries in the UdisksErrors enum.
+constexpr int kUdisksErrorNumEntries{
     static_cast<int>(UdisksErrors::UDISKS_ERROR_NUM_ENTRIES)};
 
 /// Name strings for the UDisks D-Bus errors.
