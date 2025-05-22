@@ -1,6 +1,7 @@
 # udisks-sdbus-c++
 
-Auto-generated sdbus-c++ bindings for UDisks D-Bus API.
+Auto-generated [sdbus-c++] bindings for UDisks D-Bus API.
+Header-only library.
 
 ## Building
 
@@ -73,6 +74,12 @@ udisks-sdbus-c++ will only introduce breaking changes to the library on UDisks
 major version number bumps. udisks-sdbus-c++ **will not introduce breaking
 changes between patch version number bumps**.
 
+## Disclaimer
+
+This project is not affiliated with [sdbus-c++] or Kistler Group.
+
 ## License
 
 Licensed under the [MIT License](LICENSE).
+
+[sdbus-c++]: https://github.com/Kistler-Group/sdbus-cpp/
