@@ -11,8 +11,8 @@ project_description = 'Auto-generated sdbus-c++ bindings for UDisks D-Bus API'
 udisks2_current_version = meson.project_version().split('-')[0]
 
 # sdbus-c++ follows SemVer.
-sdbus_cpp = dependency('sdbus-c++', version: ['>=2.1.0', '<=3.0.0'])
-udisks2 = dependency('udisks2', version: ['>=' + udisks2_current_version, '<3.0'])
+sdbus_cpp = dependency('sdbus-c++', version: ['>=2.1.0', '<3.0.0'])
+udisks2 = dependency('udisks2', version: ['>=' + udisks2_current_version, '<3.0.0'])
 
 subdir('dbus')
 
