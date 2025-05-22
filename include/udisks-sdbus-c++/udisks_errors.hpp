@@ -40,11 +40,11 @@ enum class UdisksErrors {
   /// requested operation.
   kUdisksErrorNotAuthorized,
   /// org.freedesktop.UDisks2.Error.NotAuthorizedCanObtain: Like
-  /// %UDISKS_ERROR_NOT_AUTHORIZED but authorization can be obtained through
+  /// kUdisksErrorNotAuthorized but authorization can be obtained through
   /// e.g. authentication.
   kUdisksErrorNotAuthorizedCanObtain,
   /// org.freedesktop.UDisks2.Error.NotAuthorizedDismissed: Like
-  /// %UDISKS_ERROR_NOT_AUTHORIZED but an authentication was shown and the user
+  /// kUdisksErrorNotAuthorized but an authentication was shown and the user
   /// dismissed it.
   kUdisksErrorNotAuthorizedDismissed,
   /// org.freedesktop.UDisks2.Error.AlreadyMounted: The device is already
