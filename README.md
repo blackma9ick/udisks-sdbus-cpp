@@ -7,6 +7,9 @@ Header-only library.
 
 ### Setup
 
+Minimum C++ standard version required: C++17
+(same as required by [sdbus-c++])
+
 Make sure the project version matches the `udisks2` Meson dependency:
 this determines which UDisks version the bindings will match.
 
