@@ -53,6 +53,26 @@ always: look at the [Meson documentation](https://mesonbuild.com/Installing.html
 
 Dependency variable: `udisks_sdbus_cpp_dep`
 
+## Versioning
+
+udisks-sdbus-c++ follows UDisks's major and minor version numbers
+(`MAJOR.MINOR.patch`, `patch` is not followed), and a library specific patch
+version number (`[...]-LIBRARY`).
+
+The resulting version scheme looks like: `MAJOR.MINOR-LIBRARY`
+
+UDisks promises to bump the major version number upon breaking changes, i.e.,
+UDisks partially follows SemVer.
+See [`udisks(8)`](https://manpages.debian.org/stretch/udisks2/udisks.8.en.html#API_STABILITY)
+for more information.
+
+Thus, udisks-sdbus-c++ **guarantees a stable D-Bus API** on the **same major
+version number**.
+
+udisks-sdbus-c++ will only introduce breaking changes to the library on UDisks
+major version number bumps. udisks-sdbus-c++ **will not introduce breaking
+changes between patch version number bumps**.
+
 ## License
 
-Licensed under the [MIT License](LICENSE)
+Licensed under the [MIT License](LICENSE).
