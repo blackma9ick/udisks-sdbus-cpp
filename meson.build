@@ -27,7 +27,7 @@ project_dep = declare_dependency(
   sources: [gen_bindings],
 )
 set_variable(
-  project_friendly_name.replace('-', '_') + '_dep',
+  project_friendly_name.underscorify() + '_dep',
   project_dep,
 )
 
