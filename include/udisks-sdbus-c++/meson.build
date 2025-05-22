@@ -8,7 +8,7 @@ gen_bindings = custom_target(
   input: dbus_interface,
   command: [xml2cpp_prog, '@INPUT@', '--adaptor=@OUTPUT0@', '--proxy=@OUTPUT1@'],
   install: true,
-  install_dir: 'include/' + meson.project_name(),
+  install_dir: 'include/' / meson.project_name(),
 )
 
 install_headers('udisks_errors.hpp', subdir : meson.project_name())
