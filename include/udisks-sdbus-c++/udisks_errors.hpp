@@ -30,79 +30,79 @@ namespace udisks_sdbus {
 /// Error codes for the UDisks D-Bus error names.
 enum class UdisksErrors {
   /// org.freedesktop.UDisks2.Error.Failed: The operation failed.
-  UDISKS_ERROR_FAILED,
+  kUdisksErrorFailed,
   /// org.freedesktop.UDisks2.Error.Cancelled: The operation was cancelled.
-  UDISKS_ERROR_CANCELLED,
+  kUdisksErrorCancelled,
   /// org.freedesktop.UDisks2.Error.AlreadyCancelled: The operation has already
   /// been cancelled.
-  UDISKS_ERROR_ALREADY_CANCELLED,
+  kUdisksErrorAlreadyCancelled,
   /// org.freedesktop.UDisks2.Error.NotAuthorized: Not authorized to perform the
   /// requested operation.
-  UDISKS_ERROR_NOT_AUTHORIZED,
+  kUdisksErrorNotAuthorized,
   /// org.freedesktop.UDisks2.Error.NotAuthorizedCanObtain: Like
   /// %UDISKS_ERROR_NOT_AUTHORIZED but authorization can be obtained through
   /// e.g. authentication.
-  UDISKS_ERROR_NOT_AUTHORIZED_CAN_OBTAIN,
+  kUdisksErrorNotAuthorizedCanObtain,
   /// org.freedesktop.UDisks2.Error.NotAuthorizedDismissed: Like
   /// %UDISKS_ERROR_NOT_AUTHORIZED but an authentication was shown and the user
   /// dismissed it.
-  UDISKS_ERROR_NOT_AUTHORIZED_DISMISSED,
+  kUdisksErrorNotAuthorizedDismissed,
   /// org.freedesktop.UDisks2.Error.AlreadyMounted: The device is already
   /// mounted.
-  UDISKS_ERROR_ALREADY_MOUNTED,
+  kUdisksErrorAlreadyMounted,
   /// org.freedesktop.UDisks2.Error.NotMounted: The device is not mounted.
-  UDISKS_ERROR_NOT_MOUNTED,
+  kUdisksErrorNotMounted,
   /// org.freedesktop.UDisks2.Error.OptionNotPermitted: Not permitted to use the
   /// requested option.
-  UDISKS_ERROR_OPTION_NOT_PERMITTED,
+  kUdisksErrorOptionNotPermitted,
   /// org.freedesktop.UDisks2.Error.MountedByOtherUser: The device is mounted by
   /// another user.
-  UDISKS_ERROR_MOUNTED_BY_OTHER_USER,
+  kUdisksErrorMountedByOtherUser,
   /// org.freedesktop.UDisks2.Error.AlreadyUnmounting: The device is already
   /// unmounting.
-  UDISKS_ERROR_ALREADY_UNMOUNTING,
+  kUdisksErrorAlreadyUnmounting,
   /// org.freedesktop.UDisks2.Error.NotSupported: The operation is not supported
   /// due to missing driver/tool support.
-  UDISKS_ERROR_NOT_SUPPORTED,
+  kUdisksErrorNotSupported,
   /// org.freedesktop.UDisks2.Error.Timedout: The operation timed out.
-  UDISKS_ERROR_TIMED_OUT,
+  kUdisksErrorTimedOut,
   /// org.freedesktop.UDisks2.Error.WouldWakeup: The operation would wake up a
   /// disk that is in a deep-sleep state.
-  UDISKS_ERROR_WOULD_WAKEUP,
+  kUdisksErrorWouldWakeup,
   /// org.freedesktop.UDisks2.Error.DeviceBusy: Attempting to unmount a device
   /// that is busy.
-  UDISKS_ERROR_DEVICE_BUSY,
+  kUdisksErrorDeviceBusy,
   /// org.freedesktop.UDisks2.Error.ISCSI.CommunicationFailed
-  UDISKS_ERROR_ISCSI_DAEMON_TRANSPORT_FAILED,
+  kUdisksErrorIscsiDaemonTransportFailed,
   /// org.freedesktop.UDisks2.Error.ISCSI.HostNotFound
-  UDISKS_ERROR_ISCSI_HOST_NOT_FOUND,
+  kUdisksErrorIscsiHostNotFound,
   /// org.freedesktop.UDisks2.Error.ISCSI.IDMB
-  UDISKS_ERROR_ISCSI_IDMB,
+  kUdisksErrorIscsiIdmb,
   /// org.freedesktop.UDisks2.Error.ISCSI.LoginFailed
-  UDISKS_ERROR_ISCSI_LOGIN_FAILED,
+  kUdisksErrorIscsiLoginFailed,
   /// org.freedesktop.UDisks2.Error.ISCSI.LoginAuthFailed
-  UDISKS_ERROR_ISCSI_LOGIN_AUTH_FAILED,
+  kUdisksErrorIscsiLoginAuthFailed,
   /// org.freedesktop.UDisks2.Error.ISCSI.LoginFatal
-  UDISKS_ERROR_ISCSI_LOGIN_FATAL,
+  kUdisksErrorIscsiLoginFatal,
   /// org.freedesktop.UDisks2.Error.ISCSI.LogoutFailed
-  UDISKS_ERROR_ISCSI_LOGOUT_FAILED,
+  kUdisksErrorIscsiLogoutFailed,
   /// org.freedesktop.UDisks2.Error.ISCSI.NoFirmware
-  UDISKS_ERROR_ISCSI_NO_FIRMWARE,
+  kUdisksErrorIscsiNoFirmware,
   /// org.freedesktop.UDisks2.Error.ISCSI.NoObjectsFound
-  UDISKS_ERROR_ISCSI_NO_OBJECTS_FOUND,
+  kUdisksErrorIscsiNoObjectsFound,
   /// org.freedesktop.UDisks2.Error.ISCSI.NotConnected
-  UDISKS_ERROR_ISCSI_NOT_CONNECTED,
+  kUdisksErrorIscsiNotConnected,
   /// org.freedesktop.UDisks2.Error.ISCSI.TransportFailed
-  UDISKS_ERROR_ISCSI_TRANSPORT_FAILED,
+  kUdisksErrorIscsiTransportFailed,
   /// org.freedesktop.UDisks2.Error.ISCSI.UnknownDiscoveryType
-  UDISKS_ERROR_ISCSI_UNKNOWN_DISCOVERY_TYPE,
+  kUdisksErrorIscsiUnknownDiscoveryType,
   /// Number of entries in this enum. Not an error, and cannot be an error!
-  UDISKS_ERROR_NUM_ENTRIES,
+  kUdisksErrorNumEntries,
 };
 
 /// Number of entries in the UdisksErrors enum.
 constexpr int kUdisksErrorNumEntries{
-    static_cast<int>(UdisksErrors::UDISKS_ERROR_NUM_ENTRIES)};
+    static_cast<int>(UdisksErrors::kUdisksErrorNumEntries)};
 
 /// Name strings for the UDisks D-Bus errors.
 constexpr std::array<const char *, kUdisksErrorNumEntries> UdisksErrorNames{
@@ -136,7 +136,7 @@ constexpr std::array<const char *, kUdisksErrorNumEntries> UdisksErrorNames{
 };
 
 static_assert(UdisksErrorNames.size() ==
-                  static_cast<int>(UdisksErrors::UDISKS_ERROR_NUM_ENTRIES),
+                  static_cast<int>(UdisksErrors::kUdisksErrorNumEntries),
               "must update UDisks error names");
 
 } // namespace udisks_sdbus
