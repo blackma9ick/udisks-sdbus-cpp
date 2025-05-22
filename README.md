@@ -3,12 +3,14 @@
 Auto-generated [sdbus-c++] bindings for UDisks D-Bus API.
 Header-only library.
 
+Minimum C++ standard version required: C++17
+(same as required by [sdbus-c++])
+
 ## Building
 
 ### Setup
 
-Minimum C++ standard version required: C++17
-(same as required by [sdbus-c++])
+Minimum Meson version required: `0.63.0`
 
 Make sure the project version matches the `udisks2` Meson dependency:
 this determines which UDisks version the bindings will match.
