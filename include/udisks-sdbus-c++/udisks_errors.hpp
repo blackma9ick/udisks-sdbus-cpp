@@ -140,10 +140,6 @@ constexpr std::array<const char *, kUdisksErrorNumEntries> UdisksErrorNames{
     "org.freedesktop.UDisks2.Error.ISCSI.UnknownDiscoveryType",
 };
 
-static_assert(UdisksErrorNames.size() ==
-                  static_cast<int>(UdisksErrors::kUdisksErrorNumEntries),
-              "must update UDisks error names");
-
 } // namespace org::freedesktop::UDisks2
 
 #endif // UDISKS_SDBUS_CPP_UDISKS_ERRORS_HPP_
