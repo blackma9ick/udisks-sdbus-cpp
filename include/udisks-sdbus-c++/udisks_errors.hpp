@@ -110,7 +110,7 @@ constexpr int kUdisksErrorNumEntries{
     static_cast<int>(UdisksErrors::kUdisksErrorNumEntries)};
 
 /// Name strings for the UDisks D-Bus errors.
-constexpr std::array<const char *, kUdisksErrorNumEntries> UdisksErrorNames{
+constexpr std::array<const char *, kUdisksErrorNumEntries> udisks_error_names{
     "org.freedesktop.UDisks2.Error.Failed",
     "org.freedesktop.UDisks2.Error.Cancelled",
     "org.freedesktop.UDisks2.Error.AlreadyCancelled",
