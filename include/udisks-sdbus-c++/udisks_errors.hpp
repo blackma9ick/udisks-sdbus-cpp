@@ -24,11 +24,14 @@
 #define UDISKS_SDBUS_CPP_UDISKS_ERRORS_HPP_
 
 #include <array>
+#include <cstddef>
 
 namespace org::freedesktop::UDisks2 {
 
 /// Error codes for the UDisks D-Bus error names.
-enum class UdisksErrors {
+namespace UdisksErrors {
+
+enum : std::size_t {
   /// org.freedesktop.UDisks2.Error.Failed: The operation failed.
   kUdisksErrorFailed,
   /// org.freedesktop.UDisks2.Error.Cancelled: The operation was cancelled.
@@ -99,6 +102,8 @@ enum class UdisksErrors {
   /// Number of entries in this enum. Not an error, and cannot be an error!
   kUdisksErrorNumEntries,
 };
+
+} // namespace UdisksErrors
 
 /// Number of entries in the UdisksErrors enum.
 constexpr int kUdisksErrorNumEntries{
