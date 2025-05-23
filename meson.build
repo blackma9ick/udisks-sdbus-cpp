@@ -1,7 +1,7 @@
 project(
   'udisks-sdbus-c++',
   'cpp',
-  version: '2.10-1',
+  version: '2.10-0',
   license: 'MIT',
   meson_version: '>=0.63.0',
 )
