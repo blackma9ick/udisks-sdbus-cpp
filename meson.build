@@ -41,5 +41,5 @@ pkg.generate(
   description: project_description,
   subdirs: meson.project_name(),
   requires: [sdbus_cpp, udisks2],
-  url: 'https://codeberg.org/xlacroixx/' + project_friendly_name,
+  url: 'https://github.com/blackma9ick/' + project_friendly_name,
 )
