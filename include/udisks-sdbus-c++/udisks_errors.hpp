@@ -1,4 +1,4 @@
-// Copyright (c) 2025 xlacroixx
+// Copyright (c) 2025 blackma9ick
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

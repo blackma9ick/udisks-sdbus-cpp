@@ -32,7 +32,7 @@ set_variable(
   project_dep,
 )
 
-# TEST(xlacroixx): grab an UDisks example program.
+# TEST(blackma9ick): grab an UDisks example program.
 
 pkg = import('pkgconfig')
 pkg.generate(

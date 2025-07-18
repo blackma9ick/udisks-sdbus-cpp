@@ -58,7 +58,7 @@ always: look at the [Meson documentation](https://mesonbuild.com/Installing.html
 > [!NOTE]
 > Incomplete.
 
-<!-- TODO(xlacroixx): complete -->
+<!-- TODO(blackma9ick): complete -->
 
 Dependency variable: `udisks_sdbus_cpp_dep`
 
