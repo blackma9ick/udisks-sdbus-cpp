@@ -15,8 +15,12 @@ Minimum C++ standard version required: C++17
 
 Minimum Meson version required: `0.63.0`
 
-Make sure the project version matches the `udisks2` Meson dependency:
-this determines which UDisks version the bindings will match.
+You must install [sdbus-cpp](https://github.com/Kistler-Group/sdbus-cpp) first;
+it provides the required `sdbus-c++-xml2cpp` program.
+
+Afterwards, make sure the project version matches the `udisks2` Meson
+dependency: this determines which UDisks version the bindings will match.
+Otherwise you can go to the [UDisks upstream repository] and get it from there.
 
 At the setup phase, you must define the `udisks_dbus_interface` Meson option:
 this is the UDisks D-Bus interface description file that the project will
@@ -37,6 +41,15 @@ meson setup \
 ...or in the `meson_options.txt` file, or even your project's
 `meson.options`/`meson_options.txt`, since the option [yields to the
 superproject](https://mesonbuild.com/Build-options.html#yielding-to-superproject-option).
+
+The file's location may vary depending on your distribution.
+
+- Usually, it is located in the `/usr/share/dbus-1/interfaces/`
+  system directory.
+- In the [UDisks upstream repository], it is located at
+  [data/org.freedesktop.UDisks2.xml]
+- Alternatively, you may change the file location in the root project
+  `meson.build`
 
 ### Compile
 
@@ -90,4 +103,6 @@ This project is not affiliated with [sdbus-c++] or Kistler Group.
 
 Licensed under the [MIT License](LICENSE).
 
+[data/org.freedesktop.UDisks2.xml]: https://github.com/storaged-project/udisks/blob/master/data/org.freedesktop.UDisks2.xml
 [sdbus-c++]: https://github.com/Kistler-Group/sdbus-cpp/
+[UDisks upstream repository]: https://github.com/storaged-project/udisks
