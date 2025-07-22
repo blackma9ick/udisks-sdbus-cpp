@@ -2,5 +2,6 @@ option(
   'udisks_dbus_interface',
   type: 'string',
   description: 'Path to the UDisks D-Bus API interface description (IDL) file',
+  value: '/usr/share/dbus-1/interfaces/org.freedesktop.UDisks2.xml',
   yield: true,
 )
