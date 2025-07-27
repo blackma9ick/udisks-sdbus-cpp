@@ -106,6 +106,9 @@ constexpr int kUdisksErrorNumEntries{
     static_cast<int>(UdisksErrors::kUdisksErrorNumEntries)};
 
 /// Name strings for the UDisks D-Bus errors.
+///
+/// You should use the ErrorName function to retrieve a name, instead of
+/// indexing this array directly.
 constexpr std::array<const char *, kUdisksErrorNumEntries> udisks_error_names{
     "org.freedesktop.UDisks2.Error.Failed",
     "org.freedesktop.UDisks2.Error.Cancelled",
@@ -135,6 +138,10 @@ constexpr std::array<const char *, kUdisksErrorNumEntries> udisks_error_names{
     "org.freedesktop.UDisks2.Error.ISCSI.TransportFailed",
     "org.freedesktop.UDisks2.Error.ISCSI.UnknownDiscoveryType",
 };
+
+constexpr const char *ErrorName(UdisksErrors err) {
+  return udisks_error_names.at(static_cast<std::size_t>(err));
+}
 
 } // namespace org::freedesktop::UDisks2
 
