@@ -29,9 +29,7 @@
 namespace org::freedesktop::UDisks2 {
 
 /// Error codes for the UDisks D-Bus error names.
-namespace UdisksErrors {
-
-enum : std::size_t {
+enum class UdisksErrors : std::size_t {
   /// org.freedesktop.UDisks2.Error.Failed: The operation failed.
   kUdisksErrorFailed,
   /// org.freedesktop.UDisks2.Error.Cancelled: The operation was cancelled.
@@ -102,8 +100,6 @@ enum : std::size_t {
   /// Number of entries in this enum. Not an error, and cannot be an error!
   kUdisksErrorNumEntries,
 };
-
-} // namespace UdisksErrors
 
 /// Number of entries in the UdisksErrors enum.
 constexpr int kUdisksErrorNumEntries{
