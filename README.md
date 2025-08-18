@@ -1,8 +1,5 @@
 # udisks-sdbus-c++
 
-> [!WARNING]
-> Unstable! Will be stable once udisks-sdbus-c++ reaches version 1.
-
 Auto-generated [sdbus-c++] bindings for UDisks D-Bus API.
 Header-only library.
 
