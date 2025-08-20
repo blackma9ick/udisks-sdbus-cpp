@@ -65,12 +65,9 @@ always: look at the [Meson documentation](https://mesonbuild.com/Installing.html
 
 ## Use as Meson subproject
 
-> [!NOTE]
-> Incomplete.
+The dependency variable is: `udisks_sdbus_cpp_dep`
 
-<!-- TODO(blackma9ick): complete -->
-
-Dependency variable: `udisks_sdbus_cpp_dep`
+You can use it like every other Meson subproject.
 
 ## Versioning
 
