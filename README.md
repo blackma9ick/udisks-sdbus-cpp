@@ -20,8 +20,8 @@ dependency: this determines which UDisks version the bindings will match.
 Otherwise you can go to the [UDisks upstream repository] and get it from there.
 
 At the setup phase, you must define the `udisks_dbus_interface` Meson option:
-this is the UDisks D-Bus interface description file that the project will
-retrieve in the setup process, installing it in `dbus/`.
+this is the absolute path to the UDisks D-Bus interface description file that
+the project will retrieve in the setup process, installing it in `dbus/`.
 
 > [!WARNING]
 > It will always overwrite any existing D-Bus interface description file:
