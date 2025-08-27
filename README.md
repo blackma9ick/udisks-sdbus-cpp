@@ -13,8 +13,8 @@ The library contains three other helpful headers:
 
 - `udisks_errors.hpp`: errors that UDisks may return;
 - `udisks_globals.hpp`: basic UDisks global variables (object path, service name...);
-- `udisks_proxy_wrappers.hpp`: basic UDisks proxies that have simply register
-  and deregisters on creation and destruction respectively.
+- `udisks_proxy_wrappers.hpp`: basic UDisks proxies that simply register and
+  deregister on creation and destruction respectively.
 
 ## Building
 
