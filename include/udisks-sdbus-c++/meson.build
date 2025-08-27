@@ -11,4 +11,8 @@ gen_bindings = custom_target(
   install_dir: 'include/' / meson.project_name(),
 )
 
-install_headers('udisks_errors.hpp', subdir : meson.project_name())
+install_headers(
+	'udisks_errors.hpp',
+	'udisks_globals.hpp',
+	subdir : meson.project_name(),
+)
