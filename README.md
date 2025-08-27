@@ -6,7 +6,10 @@ Header-only library.
 Minimum C++ standard version required: C++17
 (same as required by [sdbus-c++])
 
-The library contains three headers:
+For the server proxy, include `udisks_adaptor.hpp`; for the client proxy,
+include `udisks_proxy.hpp`.
+
+The library contains three other helpful headers:
 
 - `udisks_errors.hpp`: errors that UDisks may return;
 - `udisks_globals.hpp`: basic UDisks global variables (object path, service name...);
