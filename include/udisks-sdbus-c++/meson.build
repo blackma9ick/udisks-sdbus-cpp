@@ -14,5 +14,6 @@ gen_bindings = custom_target(
 install_headers(
 	'udisks_errors.hpp',
 	'udisks_globals.hpp',
+	'udisks_proxy_wrappers.hpp',
 	subdir : meson.project_name(),
 )
