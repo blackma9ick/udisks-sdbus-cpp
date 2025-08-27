@@ -97,7 +97,7 @@ version number**.
 
 udisks-sdbus-c++ will only introduce breaking changes to the library on UDisks
 major version number bumps. udisks-sdbus-c++ **will not introduce breaking
-changes between patch version number bumps**.
+changes between patch version nor library specific version number bumps**.
 
 ## Disclaimer
 
